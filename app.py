@@ -9,7 +9,9 @@ import pandas as pd
 from datetime import datetime
 
 os.environ["ALPHAVANTAGE_API_KEY"] = "UYGV8I8OA3NOLHI7"
+
 app  = dash.Dash()
+server = app.server
 nsdp = pd.read_csv("data/NASDAQcompanylist.csv") 
 nsdp.set_index("Symbol",inplace = True)
 options = []
@@ -79,4 +81,4 @@ def update_graph(n_clicks,stock_ticker,start_date,end_date):
     }
     return fig
 if __name__ == "__main__":
-    app.server.run(debug=True, threaded=True)
+    app.run_server(debug=True)
