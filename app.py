@@ -24,7 +24,7 @@ for tic in nsdp.index:
     options.append(mydict)
 
 app.layout = html.Div([
-                html.H1("Stock Ticker Dashboard"),
+                html.H1("Stock Ticker Dashboard V1"),
                 html.Div([
                     html.H3("Enter a stock symbol:",style = {"paddingRight":"30px"}),
                      dcc.Dropdown(id = "my_stock_picker",
