@@ -12,6 +12,7 @@ os.environ["ALPHAVANTAGE_API_KEY"] = "UYGV8I8OA3NOLHI7"
 
 app  = dash.Dash()
 server = app.server
+
 nsdp = pd.read_csv("data/NASDAQcompanylist.csv") 
 nsdp.set_index("Symbol",inplace = True)
 options = []
