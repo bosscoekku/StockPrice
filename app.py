@@ -26,7 +26,7 @@ for tic in nsdp.index:
 app.layout = html.Div([
                 html.H1("Stock Ticker Dashboard"),
                 html.Div([
-                    html.H3("Enter a stock symbol:",style = {"paddingRight":"30px"}),
+                    html.H3("Enter a stock symbol:"),
                      dcc.Dropdown(id = "my_stock_picker",
                             options = options,
                             value = ["TSLA"],
@@ -42,9 +42,9 @@ app.layout = html.Div([
                         ),
                         html.Button(id = "submit-button",
                                 n_clicks =  0,
-                                children = "เช็คข้อมูล",
+                                children = "Checking",
                                 style = {"fontSize":27,"marginLeft":"8px"}),
-                ],style = {"display":"inline-block"}),
+                ]),
                 
                 dcc.Graph(id = "my_graph",
                             figure = {"data":[
