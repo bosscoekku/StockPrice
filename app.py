@@ -12,6 +12,7 @@ from datetime import datetime
 os.environ["ALPHAVANTAGE_API_KEY"] = "UYGV8I8OA3NOLHI7"
 
 app  = dash.Dash()
+app.title = "Stock Dashboard"
 server = app.server
 
 nsdp = pd.read_csv("data/NASDAQcompanylist.csv") 
