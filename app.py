@@ -44,7 +44,11 @@ app.layout = html.Div([
                         html.Button(id = "submit-button",
                                 n_clicks =  0,
                                 children = "Checking",
-                                style = {"fontSize":27,"marginLeft":"8px"}),
+                                style = {"fontSize":27,
+                                        "marginLeft":"8px",
+                                        "padding": "9px 32px",
+                                        "cursor": "pointer",
+                                        "border-radius": "15px"}),
                 ]),
                 
                 dcc.Graph(id = "my_graph",
